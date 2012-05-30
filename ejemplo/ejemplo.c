@@ -6,6 +6,12 @@
 #include "php.h"
 #include "php_ejemplo.h"
 
+/** funciones */
+
+PHP_FUNCTION(suma){
+    RETURN_STRING("Hello World", 1);
+}
+
 /** Registrar todas las funciones */
 static function_entry ejemplo_functions[] = {
 	PHP_FE(suma, NULL)
@@ -30,9 +36,3 @@ zend_module_entry ejemplo_module_entry = {
 ZEND_GET_MODULE(ejemplo)
 #endif
 
-
-/** funciones */
-
-PHP_FUNCTION(suma){
-    RETURN_STRING("Hello World", 1);
-}
